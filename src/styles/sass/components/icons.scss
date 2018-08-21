@@ -1,0 +1,43 @@
+@mixin icon-include($sprite, $onlySprite: false, $translateTop50: false){
+  @if ($onlySprite == false){
+    background-image: url(../images/sprite@1x.png);
+    background-size: $spritesheet-width $spritesheet-height;
+
+    @media (min-resolution: 192dpi){
+      background-image: url(../images/sprite@2x.png);
+    }
+  }
+
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+
+  @if ($translateTop50 == true){
+    margin-top: -(nth($sprite, 6) / 2);
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../images/sprite@1x.png);
+  background-size: $spritesheet-width $spritesheet-height;
+
+  @media (min-resolution: 192dpi){
+    background-image: url(../images/sprite@2x.png);
+  }
+
+  @each $sprite in $spritesheet-sprites {
+    $sprite-name: nth($sprite, 10);
+
+    &__#{$sprite-name}{
+      @include sprite-position($sprite);
+      @include sprite-width($sprite);
+      @include sprite-height($sprite);
+
+      &_translate--50 {
+        margin-top: -(nth($sprite, 6) / 2);
+      }
+    }
+  }
+}

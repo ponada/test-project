@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $project-base-font-family;
+  font-size: $project-base-font-size;
+  line-height: $project-base-line-height;
+  color: $project-base-color;
+  background: $project-base-bg;
+}
+
+.window {
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.b-main {
+  background: $project-base-bg;
+}
+
+a {
+  text-decoration: none;
+  color: $project-link-color;
+  transition: color .3s;
+
+  &:hover {
+    text-decoration: none;
+    color: $project-link-color-hover;
+  }
+
+  &:focus {}
+}
+
+img {
+  max-width: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
