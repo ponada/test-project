@@ -1,0 +1,50 @@
+.button {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-family: $roboto-m;
+  line-height: 20px;
+  padding: 9px 16px 8px 16px;
+  overflow: hidden;
+  border-radius: 2px;
+  color: $project-link-color;
+  text-align: center;
+  outline: none;
+  background-color: transparent;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  background-image: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: .3s;
+  cursor: pointer;
+  border: none;
+  &-purple {
+	background-color: #A981CC;
+	color: #ffffff;
+	&:hover {
+		background-color: #9874B8;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+		transition: .3s;
+	}
+	&:focus {
+		background-color: #8767A3;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+		transition: .3s;
+	}
+	&:pressed {
+		background-color: #8767A3;
+	}
+  }
+  &-white {
+	color: rgba(77, 77, 77, 1);
+  }
+  &>.button__icon-left {
+	  margin-right: 5px;
+  }
+}
+.button-decline {
+	color: rgba(196, 175, 201, 1);
+}
+
+ 

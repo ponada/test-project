@@ -3,14 +3,13 @@
     font-family: '#{$ff-name}';
     font-style: normal;
     font-weight: normal;
-    src:  url('../fonts/#{$name}.woff') format('ttf');
+    src:  url('../fonts/#{$name}.ttf') format('truetype');
   }
 }
 @include fontface(Roboto-Regular, Roboto-Regular);
 @include fontface(Roboto-Medium, Roboto-Medium);
 @include fontface(Roboto-Light, Roboto-Light);
 @include fontface(Roboto-Bold, Roboto-Bold);
-@include fontface(Raleway-Medium, Raleway-Medium);
 @include fontface(Roboto-Thin, Roboto-Thin);
 @include fontface(AvenirNext-Regular, AvenirNext-Regular);
 @include fontface(Avenir-Heavy, Avenir-Heavy);

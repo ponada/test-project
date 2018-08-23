@@ -1,6 +1,3 @@
-@import "sprite/sprite";
-@import "sprite-svg/sprite_svg";
-@import "components/icons";
 
 @import "components/fontface";
 @import "components/var";
@@ -9,3 +6,11 @@
 
 @import "components/global";
 @import "components/responsive";
+
+@import "components/guideline/buttons";
+@import "components/guideline/form";
+@import "components/guideline/card";
+@import "components/guideline/pagination";
+@import "components/guideline/popup";
+
+@import "components/header/header";
