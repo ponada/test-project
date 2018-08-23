@@ -1,5 +1,10 @@
 .header {
 	margin-bottom: 15px;
+	&__title {
+		@media (min-width: 991px) {
+			width: 53%;
+		}
+	}
 	&__flex {
 		justify-content: space-between;
 		align-items: center;
@@ -7,14 +12,24 @@
 	}
 	&__button {
 		line-height: 0;
+		@media (min-width: 768px) {
+			order: 2;
+		}
 	}
 	&__search {
 		width: 100%;
 		margin-top: 17px;
+		@media (min-width: 768px) {
+			width: 324px;
+			margin-top: 0;
+		}
 	}
 	&__button {
 		.fa-plus {
 			font-size: 11px;
 		}
+	}
+	@media (min-width: 768px) {
+		margin-bottom: 24px;
 	}
 }

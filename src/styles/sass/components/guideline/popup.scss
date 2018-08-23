@@ -12,6 +12,9 @@
 		padding: 19px 16px 16px 24px;
 		box-shadow: 0px 19px 38px rgba(0,0,0,0.26);
 		z-index: 10;
+		@media (min-width: 768px) {
+			min-width: 640px;
+		}
 	}
 	&__title {
 		color: rgba(0, 0, 0, 1);

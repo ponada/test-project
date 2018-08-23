@@ -46,9 +46,10 @@
 				<div class="page-block">
 					<div class="container">
 						<div class="row">
-							<div class="col col-12 col-sm-6 col-md-4">
+							<div class="col col-12 col-sm-6 col-md-4" id="cardProd1">
 								<div class="card">
 									<div class="card__top">
+										<div class="card__remove" onclick="popup.show('remove','cardProd1')"><i class="fas fa-times"></i></div>
 										<div class="card__flex flex-box">
 											<div class="flex-box__item">
 												<div class="card__logo" style="background-color: rgba(105, 121, 150, 1);">
@@ -80,9 +81,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="col col-12 col-sm-6 col-md-4">
+							<div class="col col-12 col-sm-6 col-md-4" id="cardProd2">
 								<div class="card">
 									<div class="card__top">
+										<div class="card__remove" onclick="popup.show('remove','cardProd2')"><i class="fas fa-times"></i></div>
 										<div class="card__flex flex-box">
 											<div class="flex-box__item">
 												<div class="card__logo" style="background-color: rgba(142, 105, 150, 1);">
@@ -114,9 +116,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="col col-12 col-sm-6 col-md-4">
+							<div class="col col-12 col-sm-6 col-md-4" id="cardProd3">
 								<div class="card">
 									<div class="card__top">
+										<div class="card__remove" onclick="popup.show('remove','cardProd3')"><i class="fas fa-times"></i></div>
 										<div class="card__flex flex-box">
 											<div class="flex-box__item">
 												<div class="card__logo" style="background-color: rgba(120, 61, 132, 1);">
@@ -148,9 +151,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="col col-12 col-sm-6 col-md-4">
+							<div class="col col-12 col-sm-6 col-md-4" id="cardProd4">
 								<div class="card">
 									<div class="card__top">
+										<div class="card__remove" onclick="popup.show('remove','cardProd4')"><i class="fas fa-times"></i></div>
 										<div class="card__flex flex-box">
 											<div class="flex-box__item">
 												<div class="card__logo" style="background-color: rgba(142, 105, 150, 1);">
@@ -182,9 +186,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="col col-12 col-sm-6 col-md-4">
+							<div class="col col-12 col-sm-6 col-md-4" id="cardProd5">
 								<div class="card">
 									<div class="card__top">
+										<div class="card__remove" onclick="popup.show('remove','cardProd5')"><i class="fas fa-times"></i></div>
 										<div class="card__flex flex-box">
 											<div class="flex-box__item">
 												<div class="card__logo" style="background-color: rgba(216, 192, 138, 1);">
@@ -216,9 +221,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="col col-12 col-sm-6 col-md-4">
+							<div class="col col-12 col-sm-6 col-md-4" id="cardProd6">
 								<div class="card">
 									<div class="card__top">
+										<div class="card__remove" onclick="popup.show('remove','cardProd6')"><i class="fas fa-times"></i></div>
 										<div class="card__flex flex-box">
 											<div class="flex-box__item">
 												<div class="card__logo" style="background-color: rgba(158, 196, 195, 1);">
@@ -254,21 +260,22 @@
 					</div>
 				</div>
 				<div class="pagination">
-					<ul>
-						<li class="active"><a href="/">1</a></li>
-						<li><a href="/">2</a></li>
-						<li><a href="/">3</a></li>
-						<li><a href="/">4</a></li>
-						<li><a href="/">Next page<i class="fas fa-caret-right pagination__icon"></i></a></li>
-					</ul>
+					<div class="container">
+						<ul>
+							<li class="active"><a href="/">1</a></li>
+							<li><a href="/">2</a></li>
+							<li><a href="/">3</a></li>
+							<li><a href="/">4</a></li>
+							<li><a href="/">Next page<i class="fas fa-caret-right pagination__icon"></i></a></li>
+						</ul>
+					</div>
 				</div>
 			</main>
-			<footer class="footer">
-				
+			<footer class="footer">	
 			</footer>
-			<div class="popup popup-fixed">
-				<form class="form">
-					<div class="popup__close">
+			<div class="popup popup-fixed" id="removePopup">
+				<form class="form" id="form" onsubmit="return false;">
+					<div class="popup__close" onclick="popup.hide('remove');">
 						<i class="fas fa-times"></i>
 					</div>
 					<div class="popup__title">
@@ -280,11 +287,16 @@
 						</p>
 					</div>
 					<div class="popup__buttons text-right">
-						<input type="reset" value="DECLINE" class="button button-white button-decline">
-						<input type="submit" value="ACCEPT" class="button button-purple button-submit">
+						<input type="reset" value="DECLINE" class="button button-white button-decline" onclick="popup.hide('remove');">
+						<input type="submit" value="ACCEPT" class="button button-purple button-submit" onclick="popup.hide('remove');">
 					</div>
 				</form>
 			</div>
 		</div>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="../js/script.js"></script>
     </body>
 </html>

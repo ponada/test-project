@@ -8,7 +8,6 @@
 }
 
 html {
-	max-width: 1280px;
     margin: 0 auto;
 	-webkit-text-size-adjust: 100%;
 }
@@ -195,6 +194,9 @@ h1, .h1 {
 	font-family: $project-h1-font;
 	font-size: 24px;
 	line-height: 1.2em;
+	@media (min-width: 768px) {
+		font-size: 32px;
+	}
 }
 
 .flex-box {
