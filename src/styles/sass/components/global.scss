@@ -130,6 +130,10 @@ textarea {
 .window {
   padding: 39px 43px 39px 31px;
   min-height: 100vh;
+  @media (min-width: 767px) {
+	padding-left: 0;
+	padding-right: 0;
+  }
 }
 
 .window-black {
