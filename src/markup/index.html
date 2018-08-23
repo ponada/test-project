@@ -29,7 +29,7 @@
 							</h1>
 						</div>
 						<div class="header__button">
-							<div class="button button-purple"><i class="fas fa-plus button__icon-left"></i>Add new</div>
+							<div class="button button-purple" onclick="popup.show('add');"><i class="fas fa-plus button__icon-left"></i>Add new</div>
 						</div>
 						<div class="header__search">
 							<form class="form">
@@ -45,7 +45,7 @@
 			<main class="main">
 				<div class="page-block">
 					<div class="container">
-						<div class="row">
+						<div class="row" id="cardsContainer">
 							<div class="col col-12 col-sm-6 col-md-4" id="cardProd1">
 								<div class="card">
 									<div class="card__top">
@@ -275,7 +275,7 @@
 			</footer>
 			<div class="popup popup-fixed" id="removePopup">
 				<form class="form" id="form" onsubmit="return false;">
-					<div class="popup__close" onclick="popup.hide('remove');">
+					<div class="popup__close" onclick="popup.hide();">
 						<i class="fas fa-times"></i>
 					</div>
 					<div class="popup__title">
